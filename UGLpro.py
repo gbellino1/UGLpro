@@ -120,10 +120,10 @@ for numero, ugl, destino, detalle in todos_los_resultados:
     print("="*60)
 
 # (Opcional) Guardar en CSV
-with open('resultados_pami.csv', 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f)
-    writer.writerow(['Destino', 'Número de Solicitud', 'UGL', 'Detalle'])
-    for numero, ugl, destino, detalle in todos_los_resultados:
-        writer.writerow([destino, numero, ugl, detalle])
-
+##with open('resultados_pami.csv', 'w', newline='', encoding='utf-8') as f:
+##    writer = csv.writer(f)
+##    writer.writerow(['Destino', 'Número de Solicitud', 'UGL', 'Detalle'])
+##    for numero, ugl, destino, detalle in todos_los_resultados:
+##        writer.writerow([destino, numero, ugl, detalle])
+##
 print("\nBúsqueda completa y resultados guardados en 'resultados_pami.csv'!")
