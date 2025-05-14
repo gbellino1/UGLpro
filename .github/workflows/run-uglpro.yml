@@ -1,0 +1,26 @@
+name: Ejecutar UGLPro
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Ejecuta diariamente a las 12:00 UTC
+  workflow_dispatch:       # Permite ejecución manual desde GitHub
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v3
+
+      - name: Instalar dependencias
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+          pip install -r requirements.txt
+
+      - name: Ejecutar el script
+        env:
+          DISPLAY: :99
+        run: |
+          python uglpro.py
