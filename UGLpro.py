@@ -14,6 +14,7 @@ CHROMEDRIVER_PATH = './chromedriver.exe'
 # Palabras clave
 palabras_clave = ['kit', 'neuro', 'neurocirugía', 'estimulador', 'batería',
                   'electrodos', 'neuroestimulador', 'bomba', 'intratecal',
+                  'Percept','Activa','DTM','vanta','intellis','interstim',
                   'DRG', 'proclaim','abbott','infinity','IOS','direccional',
                   'epidural','ganglio','corriente','cerebral','electrodo','profundo']
 
@@ -34,7 +35,7 @@ destinos = [
 
 # Fecha para "Desde" y "Hasta" (mañana)
 hoy_dia = (datetime.datetime.now()+ datetime.timedelta(days=1)).day
-mañana_dia = (datetime.datetime.now()+ datetime.timedelta(days=2)).day
+mañana_dia = (datetime.datetime.now()+ datetime.timedelta(days=3)).day
 print(f"{hoy_dia , mañana_dia}")
 # Donde vamos a acumular los resultados
 todos_los_resultados = []
